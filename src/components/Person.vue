@@ -8,28 +8,26 @@
     </div>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
     export default {
         name:'Person',
-        setup(){
-            //数据
-            let name = '张三'//name不是响应式的
-            let age = 18
-            let tel = '13888888888'
-            //方法
-            function changeName(){
-                name = 'zhang-san'
-                console.log('1')//输出1，按钮有效的，只是值不是响应的
-            }
-            function changeAge(){
-                age+=1
-            }
-            function showTel(){
-                alert(tel)
-            }
+    }
+</script> -->
 
-            return {name,age,changeName,changeAge,showTel}
-        }
+<script lang="ts" setup name="Person234">
+    let name = '张三'//name不是响应式的
+    let age = 18
+    let tel = '13888888888'
+    //方法
+    function changeName(){
+        name = 'zhang-san'
+        console.log('1')//输出1，按钮有效的，只是值不是响应的
+    }
+    function changeAge(){
+        age+=1
+    }
+    function showTel(){
+        alert(tel)
     }
 </script>
 
