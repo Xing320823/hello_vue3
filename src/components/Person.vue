@@ -1,36 +1,19 @@
 <template>
     <div class="person">
-        <h2>姓名：{{ name }}</h2>
-        <h2>年龄：{{ age }}</h2>
-        <button @click="changeName">修改名字</button>
-        <button @click="changeAge">修改年龄</button>
-        <button @click="showTel">查看联系方式</button>
+        <h2>一辆{{ car.brand }}车，价值{{ car.price }}万</h2>
+        <button @click="changePrice">修改汽车的价格</button>
     </div>
 </template>
 
-<!-- <script lang="ts">
-    export default {
-        name:'Person',
-    }
-</script> -->
-
 <script lang="ts" setup name="Person">
-    import {ref} from 'vue'
+    import {reactive} from 'vue'
+    //数据
+    let car = reactive({brand:'奔驰',price:100})
 
-    let name = ref('张三')//name不是响应式的
-    let age = ref(18)
-    let tel = '13888888888'
     //方法
-    function changeName(){
-        name.value = 'zhang-san'
-        console.log(name.value)
-    }
-    function changeAge(){
-        age.value += 1
-        console.log(age.value)
-    }
-    function showTel(){
-        alert(tel)
+    function changePrice(){
+        car.price += 10
+        console.log(car.price)
     }
 </script>
 
